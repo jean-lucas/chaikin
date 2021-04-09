@@ -1,4 +1,5 @@
-from chaikin_smoothing.chaikin_smoothing import smooth
+from src.chaikin.chaikin_smoothing import smooth
 
 __all__ = ['smooth']
+
 
