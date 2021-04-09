@@ -1,0 +1,11 @@
+deploy.sh
+.venv/
+venv/
+data/
+build/
+*.egg-info
+.pytest_cache/
+*.pyc
+__pycache__/
+dist/
+.idea
