@@ -14,7 +14,7 @@ def _smooth(a: np.array) -> np.array:
     return np.array(new_pts)
 
 
-def smooth(a: np.array, n: 2) -> np.array:
+def smooth(a: np.array, n: int = 2) -> np.array:
     if not isinstance(a, np.ndarray):
         try:
             a = np.array(a)
