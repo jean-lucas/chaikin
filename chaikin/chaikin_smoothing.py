@@ -4,11 +4,9 @@ from more_itertools import windowed
 
 def _smooth(a: np.array) -> np.array:
     new_pts = []
-    print(a)
     for w in windowed(a, 2):
         q = (0.75 * w[0]) + (0.25 * w[1])
         r = (0.25 * w[0]) + (0.75 * w[1])
-        print(w, q, r)
         new_pts.extend([q, r])
     return np.array(new_pts)
 
@@ -31,12 +29,11 @@ def smooth(a: np.array, n: int = 2) -> np.array:
         except:
             raise Exception(invalid_input_msg)
 
-    if not len(a.shape) == 2 and a.shape[1] != 2:
-        raise Exception(f"Input must be a 2-d array")
+    if len(a.shape) != 2 or a.shape[1] != 2:
+        raise Exception(f"Input must be a 2-d array, but got shape: {a.shape}")
 
     smoothed_pts = a
     for _ in range(n):
-        print("a", smoothed_pts)
         smoothed_pts = _smooth(smoothed_pts)
 
     return smoothed_pts
