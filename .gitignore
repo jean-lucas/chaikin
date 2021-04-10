@@ -3,9 +3,12 @@ deploy.sh
 venv/
 data/
 build/
+build
 *.egg-info
 .pytest_cache/
 *.pyc
 __pycache__/
 dist/
 .idea
+.coverage
+cov_html/
