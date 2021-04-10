@@ -16,7 +16,7 @@ smoothed_coordinates = chaikin.smooth(coordinates, n=num_iterations)
 
 ## Example
 
-![example](imgs/sample.png "Sample")
+![](https://github.com/jean-lucas/chaikin/blob/master/imgs/sample.png)
 
 
 ## Notes
